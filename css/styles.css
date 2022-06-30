@@ -1,0 +1,770 @@
+body {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    color: white;
+    font-size: 18px;
+}
+
+h1,h2,h3,h4 {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #92d050;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+#login-body {
+    background-image: url("../imgs/loginbackground.png");
+    background-size: cover;
+
+}
+
+#login-logo-wrapper {
+    width: 100%;
+    height: 140px;
+}
+
+#logo-wrapper {
+    margin-left: 10px;
+    float: left;
+    margin-top: 25px;
+}
+
+#logo-wrapper img {
+    height: 100px;
+    width: 300px;
+}
+
+#userinfo {
+    color: white;
+    margin: 50px 0 0 20px;
+
+
+}
+
+#userinfo input {
+    border: none;
+    padding: 10px;
+
+}
+
+
+
+#logoutbutton {
+    padding: 13px;
+    margin: 10px 0 0 0;
+    background-color:#92d050;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+    display: block;
+}
+
+#logoutbutton:hover {
+    background-color: #5B9BD5;
+    transition: background-color 0.2s;
+}
+
+#naaradminprofiel {
+    text-decoration: none;
+    color: #92d050;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 25px;
+}
+
+#naaradminprofiel:hover {
+    color: #5B9BD5;
+    transition: color 0.5s;
+}
+
+#serieswrapper {
+    margin-left: -24px;
+    color: white ;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+#serieswrapper img{
+    width:175px;
+    height:260px;
+}
+
+#serieswrapper img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#serieswrapper figcaption{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+#seriesshower {
+    height: 400px;
+    color: white;
+    margin-left: 11px;
+}
+
+#seriesshower h1, p, a{
+    margin-left: 11px;
+}
+
+#seriesshower a {
+    text-decoration: none;
+    color: #92d050;
+}
+
+#seriesshower a:hover {
+    color: #5B9BD5;
+    transition: color 0.5s;
+}
+
+#search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 70px;
+
+}
+
+#search-bar form input[type=text] {
+    width: 500px;
+    height: 40px;
+    border: none;
+    text-align: center;
+}
+
+#search-bar i {
+    color: #92d050;
+    font-size: 50px;
+    margin-top: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+
+#search-bar i:hover {
+    color: #5B9BD5;
+    transition: color 0.5s;
+    cursor: pointer;
+}
+
+#search-results {
+    display: flex;
+}
+
+#search-results img {
+    width:175px;
+    height:260px;
+}
+
+#search-results figcaption {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+#search-results img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#noResults-text {
+    margin-top: 100px;
+    text-align: center;
+    margin-left: -50px;
+}
+
+#adminnav {
+    height: 140px;
+    width: 100%;
+    background-color: black;
+    font-weight: bold;
+}
+
+#adminnav a {
+    line-height: 160px;
+    text-decoration: none;
+    color: #92d050;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 25px;
+}
+
+#adminnav a:hover {
+    color: #5B9BD5;
+    transition: color 0.5s;
+    cursor: pointer;
+}
+
+
+#naarhoboadmin  {
+    margin-left: 20px;
+    float: left;
+}
+
+#loguitadmin {
+    float: right;
+    margin-right: 20px;
+}
+
+#adminchoices-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
+figure.adminchoices {
+    font-family: 'Raleway', Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    min-width: 220px;
+    max-width: 310px;
+    max-height: 220px;
+    width: 100%;
+    background: #92d050;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+figure.adminchoices * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+figure.adminchoices img {
+    max-width: 100%;
+    position: relative;
+    opacity: 0.4;
+}
+
+figure.adminchoices figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+figure.adminchoices h2 {
+    position: absolute;
+    left: 40px;
+    right: 40px;
+    display: inline-block;
+    background: #92d050;
+    transform: skew(-10deg) rotate(-10deg) translate(0, -50%);
+    padding: 12px 5px;
+    margin: 0;
+    top: 50%;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: white;
+}
+
+figure.adminchoices h2 span {
+    font-weight: 800;
+    color: white;
+}
+
+figure.adminchoices:before {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    content: '';
+    background: white;
+    position: absolute;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    transform: rotate(110deg) translateY(-50%);
+}
+
+figure.adminchoices a {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+
+figure.adminchoices.main {
+    background: #5B9BD5;
+}
+
+figure.adminchoices.main h2 {
+    background: #5B9BD5;
+}
+
+
+
+figure.adminchoices:hover img,
+figure.adminchoices.hover img {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+figure.adminchoices:hover h2,
+figure.adminchoices.hover h2 {
+    transform: skew(-10deg) rotate(-10deg) translate(-150%, -50%);
+}
+
+figure.adminchoices:hover:before,
+figure.snip1104.hover:before {
+    transform: rotate(110deg) translateY(-150%);
+}
+
+.modal, .genre-modal, .showgenre-modal {
+    height: 600px;
+    width: 40%;
+    background-color: black;
+    border-radius: 15px;
+    border: 2px solid white;
+}
+
+
+.modal form label {
+    display: block;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    color: white;
+}
+.edit-form form label{
+    display: block;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    color: white;
+}
+
+.genre-modal form label {
+    display: block;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 120px;
+    color: white;
+}
+
+.modal select {
+    display: block;
+    width: 209px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.edit-form select {
+    display: block;
+    width: 209px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.modal input {
+    display: block;
+    width: 200px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.edit-form input{
+    display: block;
+    width: 200px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.genre-modal input {
+    display: block;
+    width: 200px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+
+
+.modal h2 {
+    text-align: center;
+}
+
+.genre-modal h2 {
+    text-align: center;
+}
+
+.showgenre-modal h2 {
+    text-align: center;
+}
+
+.showgenre-modal table {
+    text-align: center;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+#users-table {
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+#users-table button {
+    margin-right: 10px;
+}
+
+#users-table tr {
+    text-align: center;
+}
+
+#users-table th {
+    padding: 15px;
+    text-align: center;
+}
+
+#users-table td {
+    font-size: 22px;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+#showgenre-modal th {
+    padding: 15px;
+}
+
+#showgenre-modal td {
+    font-size: 22px;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+}
+
+
+.modal p {
+    text-align: center;
+    color: white;
+
+}
+
+.genre-modal p {
+    text-align: center;
+    color: white;
+}
+
+.showgenre-modal p {
+    text-align: center;
+    color: white;
+}
+
+
+
+.sluiten {
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    color: white;
+}
+
+.sluiten:hover {
+    cursor: pointer;
+    color: darkred;
+}
+
+#modal-toevoegen {
+    width: 150px;
+    height: 50px;
+    background-color:#92d050;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+    display: block;
+    border-radius: 15px;
+}
+
+#modal-toevoegen:hover {
+    background-color: #5B9BD5;
+    transition: background-color 0.2s;
+}
+
+
+.serieToevoegen-button {
+    margin: 30px auto 60px auto;
+    width: 150px;
+    height: 50px;
+    background-color:#92d050;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+    display: block;
+    border-radius: 15px;
+}
+
+.serieToevoegen-button:hover {
+    background-color: #5B9BD5;
+    transition: background-color 0.2s;
+}
+
+#actie-button-bewerken {
+   margin-top: 10px;
+    height: 35px;
+    background-color: orange;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+    border-radius: 15px;
+
+}
+
+#actie-button-bewerken:hover {
+    cursor: pointer;
+    background-color: darkorange;
+}
+
+#actie-button-verwijderen {
+    height: 35px;
+    background-color: red;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+    border-radius: 15px;
+}
+
+#actie-button-positief {
+    height: 35px;
+    background-color: limegreen;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+    border-radius: 15px;
+}
+
+#actie-button-positief:hover {
+    cursor: pointer;
+    background-color: green;
+}
+
+#actie-button-verwijderen:hover {
+    cursor: pointer;
+    background-color: darkred;
+}
+
+#actie-button-verwijderen-genre {
+    height: 22px;
+    background-color: red;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+    border-radius: 15px;
+}
+
+#actie-button-verwijderen-genre:hover {
+    cursor: pointer;
+    background-color: darkred;
+}
+
+
+.category-title {
+    margin-left: 13px;
+    margin-top: 30px;
+}
+
+.category-series {
+    margin-left: -24px;
+    color: white ;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.category-series img{
+    width:175px;
+    height:260px;
+}
+
+.category-series img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.category-series figcaption{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.last-watched {
+    margin-left: 21px;
+    display: flex;
+}
+
+
+.last-watched img {
+    width:280px;
+    height:450px;
+    margin-right: 20px;
+}
+
+.last-watched img:hover {
+    cursor: pointer;
+}
+
+#MeerSeriesButton {
+    color: #92d050;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 50px 0 50px 0;
+    text-align: center;
+}
+
+#MeerSeriesButton:hover {
+    color: #5B9BD5;
+    transition: color  0.2s;
+}
+
+#MeerSeriesButton-Wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#content-manager-buttons {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#serie-info {
+    margin-left: 50px;
+    font-size: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#serie-info h1 {
+    margin-left: 9px;
+}
+
+#verderkijken-button {
+    border-radius: 10px;
+    background-color: #92d050;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 12px;
+    width: 180px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#verderkijken-button:hover {
+    background-color:#5B9BD5;
+}
+
+#verderkijken-button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+#verderkijken-button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+#verderkijken-button:hover span {
+    padding-right: 25px;
+}
+
+#verderkijken-button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+
+
+
+
+
+
+
+
