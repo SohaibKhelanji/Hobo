@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 30 jun 2022 om 20:23
--- Serverversie: 10.4.19-MariaDB
--- PHP-versie: 8.0.7
+-- Gegenereerd op: 02 dec 2022 om 16:33
+-- Serverversie: 10.4.24-MariaDB
+-- PHP-versie: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -85,6 +85,7 @@ CREATE TABLE `users` (
   `users_achternaam` tinytext NOT NULL,
   `users_email` tinytext NOT NULL,
   `users_wachtwoord` longtext NOT NULL,
+  `users_laatstbekeken` int(11) DEFAULT NULL,
   `users_admin` char(1) DEFAULT '0',
   `users_blocked` char(1) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -93,13 +94,14 @@ CREATE TABLE `users` (
 -- Gegevens worden geëxporteerd voor tabel `users`
 --
 
-INSERT INTO `users` (`users_id`, `users_voornaam`, `users_achternaam`, `users_email`, `users_wachtwoord`, `users_admin`, `users_blocked`) VALUES
-(1, 'tester', 'een', 'testeen@hotmail.com', '$2y$10$kL2p0s6mSYE9lVekpD6XrekIl5UUMMhnyEka22BKg7TJFyEgI4I6e', '0', '0'),
-(2, 'tester', 'twee', 'testtwee@hotmail.com', '$2y$10$jvhc6/YJ8kCrxMSmp3j/huolQYBjGB4l4F/0HUTJAuGQEijwXce.m', '0', '0'),
-(3, 'Amine', 'Amrani', 'easy_adam@hotmail.com', '$2y$10$/2OfMd7MpCPPILXJA1bSpesHl4JMgHCIn/H6fyW1ujJK.Y.dF.pn2', '0', '1'),
-(4, 'Aziz', 'Khelanji', 'aziz06hs@hotmail.com', '$2y$10$KBRtYHkeiPb/Pa/d/jsWTe8Xqxsb6yclSuO3uh7Mi4UsKMfZZlxAK', '0', '0'),
-(5, 'Hanan', 'Lanjri', 'hananlanjri@hotmail.com', '$2y$10$l/Pf2SRFs2CU/ki5PoplDOC8kq0QY6r/lM.KNEGVg.GzHkQUnIAlm', '0', '0'),
-(6, 'admin', 'admin', 'admin@hobo.nl', '$2y$10$Fv9RY28U4slU8bxhz80cROTq1WR2BzmetE5MCyDJ9AGVlXZ19M/ni', '1', '0');
+INSERT INTO `users` (`users_id`, `users_voornaam`, `users_achternaam`, `users_email`, `users_wachtwoord`, `users_laatstbekeken`, `users_admin`, `users_blocked`) VALUES
+(1, 'tester', 'een', 'testeen@hotmail.com', '$2y$10$kL2p0s6mSYE9lVekpD6XrekIl5UUMMhnyEka22BKg7TJFyEgI4I6e', 1, '0', '0'),
+(2, 'tester', 'twee', 'testtwee@hotmail.com', '$2y$10$jvhc6/YJ8kCrxMSmp3j/huolQYBjGB4l4F/0HUTJAuGQEijwXce.m', NULL, '0', '0'),
+(3, 'Amine', 'Amrani', 'easy_adam@hotmail.com', '$2y$10$/2OfMd7MpCPPILXJA1bSpesHl4JMgHCIn/H6fyW1ujJK.Y.dF.pn2', NULL, '0', '1'),
+(4, 'Aziz', 'Khelanji', 'aziz06hs@hotmail.com', '$2y$10$KBRtYHkeiPb/Pa/d/jsWTe8Xqxsb6yclSuO3uh7Mi4UsKMfZZlxAK', NULL, '0', '0'),
+(5, 'Hanan', 'Lanjri', 'hananlanjri@hotmail.com', '$2y$10$l/Pf2SRFs2CU/ki5PoplDOC8kq0QY6r/lM.KNEGVg.GzHkQUnIAlm', NULL, '0', '0'),
+(6, 'admin', 'admin', 'admin@hobo.nl', '$2y$10$Fv9RY28U4slU8bxhz80cROTq1WR2BzmetE5MCyDJ9AGVlXZ19M/ni', NULL, '1', '0'),
+(7, 'Chenneryisthe', 'best-Sohaib', 'sctrump@gmail.com', '$2y$10$Cy/KekjSgl85mapzyZZIw.V4fuHndDEQxvhpGT0YBHwqYc53ZTdoK', 9, '0', '0');
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -122,7 +124,8 @@ ALTER TABLE `series`
 -- Indexen voor tabel `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`users_id`);
+  ADD PRIMARY KEY (`users_id`),
+  ADD KEY `users_laatstbekeken` (`users_laatstbekeken`);
 
 --
 -- AUTO_INCREMENT voor geëxporteerde tabellen
@@ -144,7 +147,7 @@ ALTER TABLE `series`
 -- AUTO_INCREMENT voor een tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `users_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `users_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Beperkingen voor geëxporteerde tabellen
@@ -155,6 +158,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `series`
   ADD CONSTRAINT `series_ibfk_1` FOREIGN KEY (`series_genre`) REFERENCES `genres` (`genres_id`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+--
+-- Beperkingen voor tabel `users`
+--
+ALTER TABLE `users`
+  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`users_laatstbekeken`) REFERENCES `series` (`series_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
